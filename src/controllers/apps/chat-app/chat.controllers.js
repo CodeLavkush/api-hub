@@ -176,7 +176,7 @@ const createOrGetAOneOnOneChat = asyncHandler(async (req, res) => {
 
   // if not we need to create a new one on one chat
   const newChatInstance = await Chat.create({
-    name: `Chat - ${Math.floor((Math.random() * 999 + 1))}`,
+    name: "One on One chat",
     participants: [req.user._id, new mongoose.Types.ObjectId(receiverId)], // add receiver and logged in user as participants
     admin: req.user._id,
   });
